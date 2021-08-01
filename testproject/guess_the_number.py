@@ -25,7 +25,7 @@ try:
 
     while True:
         for i in range(1, 100):
-            number_input.sendkeys(i)
+            number_input.send_keys(i)
             guess_btn.click()
         if alert.text == "Yes! That is it.":
             break
@@ -36,7 +36,7 @@ try:
     # Teszt negatív számmal
 
     restart_btn.click()
-    number_input.sendkeys(values[0])
+    number_input.send_keys(values[0])
     guess_btn.click()
 
     assert alert.text == "Guess higher."
